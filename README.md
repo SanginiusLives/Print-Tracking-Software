@@ -1,5 +1,9 @@
 # Print Tracking Software
 
+![Print Tracking Screenshot](https://media.discordapp.net/attachments/302062776967364618/1334351592605876254/Screenshot_2025-01-29_213426.png?ex=679c3742&is=679ae5c2&hm=b903077482552a98456b001a920ce414436c735b8355cb9431af44746742334a&=&format=webp&quality=lossless&width=1364&height=527)
+
+
+
 ## Overview
 The Print Tracking Software is a real-time print management system built with **React** and **Node.js**, utilizing **WebSockets** to enable multi-user connectivity. It allows users to track individual lines across **14 machines**, divided into **Large** and **Cells** (sticker sizes), and categorize them as **Reorder**, **Priority**, or **Backstock**. Additionally, users can input messages under each machine that are visible to all connected users.
 
