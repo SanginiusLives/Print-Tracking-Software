@@ -1,0 +1,308 @@
+html {
+  background-color: #ccc;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.max-width {
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 0 25px;
+}
+
+.drag-n-drop {
+  width: 100%;
+  height: 100%;
+  padding: .5rem;
+}
+
+.dnd-group {
+  background-color: #282c34;
+  border-radius: 5px;
+  padding: .5rem;
+  width: 100%;
+  margin-bottom: 10px;
+  /* min-height: 300px; */
+}
+
+.dnd-group .group-grid {
+  display: grid;
+  position: relative;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.dnd-item {
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #282c34;
+  border-radius: 5px;
+  padding: 10px 30px;
+  max-width: 350px;
+}
+
+.dnd-item b {
+  display: block;
+  text-transform: uppercase;
+}
+
+.dnd-item .top.flex {
+  justify-content: space-between;
+}
+
+.dnd-item button {
+  color: black;
+  border: black solid 1px;
+  border-radius: 5px;
+  background-color: unset;
+  transition: all .2s ease-in-out;
+}
+
+.dnd-item button:hover {
+  color: #282c34;
+  border-color: #282c34;
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.dnd-item button:active {
+  color: green;
+  scale: 0.9;
+}
+
+.machineTitle:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.dnd-item .grid {
+  margin-top: 10px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(7, 30px);
+  column-gap: 15px;
+}
+
+.group-title {
+  text-align: center;
+  margin-bottom: .5rem;
+  color: #fff;
+}
+.dnd-item * {
+  margin: 0;
+}
+
+.current {
+  background-color: #282c34;
+}
+
+ul.lines {
+  padding-inline-start: 0px;
+  list-style-type: none;
+  position: relative;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown .anchor {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 25px;
+}
+
+.dropdown.hidden ul.lines {
+  display: none;
+}
+
+.dropdown .anchor:after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid rgb(255, 255, 255);
+  border-top: 2px solid rgb(255, 255, 255);
+  padding: 5px;
+  right: -20px;
+  top: 20%;
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.dropdown .anchor:active:after {
+  right: -20px;
+  top: 21%;
+}
+
+.dropdown ul.lines {
+  padding: 2px;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #fff;
+}
+
+h3 {
+  margin-top: 0px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.dropdown.visible .lines {
+  display: block;
+}
+
+.list li {
+  padding: 5px;
+  color: black;
+}
+
+li.selected {
+  color: #fff;
+}
+
+.list {
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  max-height: 21px;
+}
+
+#priority.list, #priority li.selected{
+  background-color: rgb(180, 36, 36);
+}
+
+#reorder.list, #reorder li.selected{
+  background-color: rgb(27, 148, 11);
+}
+
+#backstock.list, #backstock li.selected{
+  background-color: rgb(17, 17, 17);
+}
+
+input[type='checkbox'] {
+  margin-right: 10px;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+}
+
+.lineItem {
+  margin: 3px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.Priority {
+  background-color: rgb(141, 27, 27);
+}
+
+.Reorder {
+  background-color: rgb(27, 148, 11);
+}
+
+.Backstock {
+  background-color: rgb(17, 17, 17);
+}
+
+.message input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  padding: 5px;
+  color: #282c34;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.message input::placeholder {
+  color: #ccc;
+  font-weight: 400;
+}
+
+#All {
+  width: 280px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.listItem {
+  display: block;
+  margin-top: 10px;
+  color: black;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.listItem:hover {
+  font-weight: bold;
+}
+
+.listItem:first-of-type {
+  margin-top: 0px;
+}
+
+.listContainer {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
